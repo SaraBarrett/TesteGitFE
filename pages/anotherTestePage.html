@@ -2,11 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Criativa</title>
 </head>
 <body>
-    
+
+    <header>
+        <h1>🌱 Pequena Experiência HTML</h1>
+        <p><em>Sem estilos. Só imaginação.</em></p>
+        <hr>
+    </header>
+
+    <main>
+        <section>
+            <h2>Uma mini história interativa</h2>
+            <details>
+                <summary>Clica para abrir o capítulo 1</summary>
+                <p>Era uma vez uma página HTML que queria ser mais do que um template vazio.</p>
+            </details>
+
+            <details>
+                <summary>Clica para abrir o capítulo 2</summary>
+                <p>Sem CSS, ela descobriu que podia ser criativa usando apenas elementos nativos.</p>
+            </details>
+
+            <details>
+                <summary>Clica para abrir o capítulo 3</summary>
+                <p>E então encontrou a Sara, que lhe pediu originalidade. E ela brilhou.</p>
+            </details>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Um pequeno questionário</h2>
+            <form onsubmit="alert('Obrigado por responder, Sara!'); return false;">
+                <p>Gostas desta abordagem sem estilos?</p>
+
+                <label>
+                    <input type="radio" name="resposta" value="sim">
+                    Sim, surpreendeu-me.
+                </label><br>
+
+                <label>
+                    <input type="radio" name="resposta" value="nao">
+                    Não, quero algo ainda mais ousado.
+                </label><br><br>
+
+                <button>Enviar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Gerador de frases</h2>
+            <p id="frase"></p>
+            <button onclick="gerarFrase()">Gerar frase</button>
+
+            <script>
+                function gerarFrase() {
+                    const frases = [
+                        "A criatividade não precisa de CSS.",
+                        "HTML puro também tem charme.",
+                        "Menos é mais — às vezes.",
+                        "A simplicidade pode ser surpreendente.",
+                        "Sara, estás a dominar isto."
+                    ];
+                    document.getElementById('frase').textContent =
+                        frases[Math.floor(Math.random() * frases.length)];
+                }
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>Feito com HTML puro e um toque de magia.</small></p>
+    </footer>
+
 </body>
 </html>
